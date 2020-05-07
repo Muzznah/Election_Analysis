@@ -1,3 +1,4 @@
+counties_dict={}
 counties=["Arapahoe","Denver","Jefferson"]
 if counties[1]=="Denver":
     print(counties[1])
@@ -7,10 +8,9 @@ if "El Paso" in counties:
 else:
     print("El Paso is not in the list of counties.")
 
- counties_dict={}
- counties_dict["Arapahoe"] = 422829
- counties_dict['Denver']=463353
- counties_dict['Jefferson']=432438
+    counties_dict["Arapahoe"] = 422829
+    counties_dict['Denver']=463353
+    counties_dict['Jefferson']=432438
 for county, voters in counties_dict.items():
     print(county, voters)
 
@@ -22,9 +22,6 @@ voting_data = [{"county":"Arapahoe", "registered_voters": 422829},{"county":"Den
 
 for county_dict in voting_data:
     print(county_dict)
-for county_dict in voting_data:
-    for value in county_dict.values():
-        print(value)
 for county, voters in counties_dict.items():
     print(county + " county has " + str(voters) + " registered voters.")
 
