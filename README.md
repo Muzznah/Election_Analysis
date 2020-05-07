@@ -12,4 +12,4 @@ The analysis showed that :
   - Jefferson: 38,855 (10.5%)
   - Denver: 306,055 (82.8%)
   
--Largest County Turnout: **Denver**
+- Largest County Turnout: **Denver**
