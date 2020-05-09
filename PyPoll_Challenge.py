@@ -1,4 +1,4 @@
-# Add our dependencies.
+# Import  dependencies.
 import csv
 import os
 # Assign a variable to load a file from a path.
@@ -30,16 +30,15 @@ county_votes={}
 largest_county_turnout=""
 #Set largest turnout to zero
 turnout_count=0
-#turnout percentage
-turnout_percentage=0
+
 
 # Open the election results and read the file.
 with open(file_to_load) as election_data:
     # To do: read and analyze the data here.
     file_reader = csv.reader(election_data)
-    # Read and print the header row.
+    # Skip the header row.
     headers = next(file_reader)
-    print(headers)
+  
     # Print each row in the CSV file.
     for row in file_reader: 
         #incremment the vote counter by 1.
@@ -100,9 +99,8 @@ with open (file_to_save,'w') as txt_file:
         txt_file.write(county_results)
 
         #Determine Largest County Turnout.
-        if(countyvotes>turnout_count) and (county_votes_percentage>turnout_percentage):
+        if(countyvotes>turnout_count) :
             turnout_count=countyvotes
-            turnout_percentage=county_votes_percentage
             largest_county_turnout=county_name
 
     #print largest  county turnout result to the terminal.
